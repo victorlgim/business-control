@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/userpage.css" />
+    <title>Userpage - Kenzie Empresas</title>
+    <script type="module" defer src="../scripts/import_userpage.js"></script>
+    <link rel="shortcut icon" href="../assets/companhia.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="modal-loading hidden">
+      <div class="spinner">
+        <div class="loading"></div>
+        <p class="loading-msg">LOADING</p>
+      </div>
+    </div>
+
+    <div class="modal-container hidden">
+      <div class="modal">
+        <img class="close-edit" src="../assets/closeedit.png" alt="" />
+        <div class="container-modal">
+          <form class="form-edit">
+            <label class="edit-profile" for="edit-profile">Editar Perfil</label>
+            <input type="text" placeholder="Seu nome" id="username" />
+            <input type="email" placeholder="Seu email" id="email" />
+            <input type="password" placeholder="Sua senha" id="password" />
+            <button class="btn-edit-profile" type="submit">
+              Editar perfil
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container-header">
+        <div class="top-header">
+          <div class="title-header">
+            <img src="../assets/ellipse.png" alt="" />
+            <h1>Kenzie Empresas</h1>
+          </div>
+          <div class="buttons-header">
+            <button class="btn-logout">Logout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="info-user">
+        <div class="user-email">
+          <h2 class="username">USERNAME</h2>
+          <span class="email">Email: meuemail@mail.com</span>
+        </div>
+        <span class="cargo">Pleno</span>
+        <span class="type-job">Home Office</span>
+        <img src="../assets/edit.png" alt="btn-edit" class="btn-edit" />
+      </section>
+      <section class="departament-null hidden">
+        <h3 class="msg-null">Você ainda não foi contratado</h3>
+      </section>
+      <section class="departament-company hidden">
+        <!-- <h4 class="title-company">Company Name - Departament Name</h4>
+        <div class="container-ul">
+          <ul class="person-company">
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+            <li class="li-company">
+              <h5 class="name-person">Nome do colega</h5>
+              <span class="cargo-person">Senior</span>
+            </li>
+          </ul>
+        </div> -->
+      </section>
+    </div>
+  </body>
+</html>

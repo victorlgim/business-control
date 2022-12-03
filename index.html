@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/homepage.css" />
+    <script type="module" defer src="./src/scripts/import_home.js"></script>
+    <link rel="shortcut icon" href="./src/assets/companhia.png" type="image/x-icon">
+    <title>Homepage - Kenzie Empresas</title>
+  </head>
+  <body>
+    <div>
+      <div class="modal-loading hidden">
+        <div class="spinner">
+          <div class="loading"></div>
+          <p class="loading-msg">LOADING</p>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container-header">
+        <div class="top-header">
+          <div class="title-header">
+            <img src="./src/assets/ellipse.png" alt="" />
+            <h1>Kenzie Empresas</h1>
+          </div>
+          <div class="menu-header">
+            <img src="./src/assets/vector.png" alt="" class="menu-three" />
+          </div>
+          <div class="modal-close-x hidden">
+            <img src="./src/assets/X.png" alt="" class="close-dropdown-x" />
+          </div>
+          <div class="buttons-header">
+            <button class="btn-login-header">Login</button>
+            <button class="btn-register-header">Cadastro</button>
+          </div>
+        </div>
+        <div class="buttons-dropdown hidden">
+          <button class="btn-login-dropdown">Login</button>
+          <button class="btn-register-dropdown">Cadastro</button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="div-flex">
+        <section class="image-bg"></section>
+        <section class="section">
+          <button class="section-btn">
+            Selecionar Setor
+            <img class="img-arrow" src="./src/assets/arrow.png" alt="" />
+          </button>
+          <select name="nivel" id="section-companies" class="setor-btn">
+            <option value="All" required hidden>Todos</option>
+            <option value="Todos">Todos</option>
+            <option value="Alimenticio">Alimentício</option>
+            <option value="Varejo">Varejo</option>
+            <option value="Textil">Textil</option>
+            <option value="Manufatura">Manufatura</option>
+            <option value="Automotiva">Automotiva</option>
+            <option value="TI">TI</option>
+            <option value="Atacado">Atacado</option>
+          </select>
+          <ul class="ul-section"></ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

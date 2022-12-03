@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Kenzie Empresas</title>
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/adminpage.css" />
+    <script type="module" defer src="../scripts/import_admin.js"></script>
+    <link rel="shortcut icon" href="../assets/companhia.png" type="image/x-icon">
+  </head>
+  <body>
+    <div>
+      <div class="modal-loading hidden">
+        <div class="spinner">
+          <div class="loading"></div>
+          <p class="loading-msg">LOADING</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container-delete-departament-user hidden">
+      <div class="modal-delete-departament-user">
+        <img
+          class="close-delete-departament-user"
+          src="../assets/closeedit.png"
+          alt=""
+        />
+        <div class="container-delete-departament-user">
+          <h3 class="title-delete-departament-user">
+            Realmente deseja deletar o Departamento NOME e demitir seus
+            funcionários?
+          </h3>
+          <button class="btn-confirm-delete-departament-user">Confirmar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container-edit-desc-departament hidden">
+      <div class="modal-edit-desc-departament">
+        <img
+          class="close-edit-desc-departament"
+          src="../assets/closeedit.png"
+          alt=""
+        />
+        <div class="container-edit-desc-departament">
+          <form class="form-edit-description-departament">
+            <h3 class="title-edit-desc-departament">Editar Departamento</h3>
+            <textarea
+              name="desc-edit"
+              id="edit-desc-departament"
+              cols="30"
+              rows="10"
+              class="text-area"
+              placeholder="Valores anteriores a descrição"
+            ></textarea>
+            <button class="btn-edit-description-departament">
+              Salvar Alterações
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container-create-departament hidden">
+      <div class="modal-create-departament">
+        <img
+          class="close-create-departament"
+          src="../assets/closeedit.png"
+          alt=""
+        />
+        <div class="container-create-departament">
+          <form class="form-create-departament">
+            <label for="text-create-departament" class="text-create-departament"
+              >Criar
+            </label>
+            <input
+              type="text"
+              id="name"
+              class="departament-name-create"
+              placeholder="Nome do departamento"
+            />
+            <input
+              type="text"
+              id="description"
+              class="description-name-create"
+              placeholder="Descrição"
+            />
+            <select
+              name="select-company"
+              class="select-company"
+              id="company_uuid"
+            >
+              <option value="0" hidden>Selecionar empresa</option>
+            </select>
+            <button class="btn-create-departament">Criar o departamento</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container-remove-user hidden">
+      <div class="modal-remove-user">
+        <img class="close-remove-user" src="../assets/closeedit.png" alt="" />
+        <div class="container-edit-user">
+          <form class="form-delete-user">
+            <h3 class="msg-remove-user">
+              Realmente deseja remover o usuário NOME?
+            </h3>
+            <button class="btn-remove-user">Deletar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container-edit-user hidden">
+      <div class="modal-edit-user">
+        <img class="close-edit-lapis" src="../assets/closeedit.png" alt="" />
+        <div class="container-edit-user">
+          <form class="form-edit-user">
+            <label for="edit-user" class="title-edit-user-modal"
+              >Editar Usuário</label
+            >
+            <select name="kind_of_work" id="kind_of_work">
+              <option value="0" required hidden>
+                Selecionar modalidade de trabalho
+              </option>
+              <option value="presencial">Presencial</option>
+              <option value="hibrido">Híbrido</option>
+              <option value="home office">Home Office</option>
+            </select>
+            <select name="professional_level" id="professional_level">
+              <option value="0" hidden>Selecionar nível profissional</option>
+              <option value="estágio">Estágio</option>
+              <option value="júnior">Júnior</option>
+              <option value="pleno">Pleno</option>
+              <option value="sênior">Senior</option>
+            </select>
+            <button class="btn-edit-modal">Editar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container-eyes hidden">
+      <div class="modal-eyes">
+        <img class="close-edit-eyes" src="../assets/closeedit.png" alt="" />
+        <h3 class="name-departament">Nome do departamento</h3>
+        <div class="form-contract">
+          <form class="form-contratar">
+            <div class="flex-modal-users">
+              <h4 class="description-departament-modal">
+                Descrição do departamento
+              </h4>
+
+              <select name="select-user" id="select-user" class="select-user">
+                <option value="0" hidden>Selecionar usuário</option>
+              </select>
+            </div>
+            <div class="company-btn">
+              <span class="company-pertinent">Empresa pertencente</span>
+              <button class="btn-contratar">Contratar</button>
+            </div>
+          </form>
+        </div>
+
+        <section class="section-users">
+          <ul class="ul-section-users"></ul>
+          <div class="erro-users hidden">
+            <h3 class="title-error">Não há funcionários neste departamento</h3>
+          </div>
+        </section>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container-header">
+        <div class="top-header">
+          <div class="title-header">
+            <img src="../assets/ellipse.png" alt="" />
+            <h1>Kenzie Empresas</h1>
+          </div>
+          <div class="buttons-header">
+            <button class="btn-logout">Logout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="top-main">
+        <h2 class="title-section">Departamentos</h2>
+        <select name="company" id="select-company" class="style-company">
+          <option value="0" hidden>Selecionar empresa</option>
+        </select>
+        <button class="btn-create">
+          <img
+            src="../assets/image-create.png"
+            alt=""
+            class="create-btn"
+          />Criar
+        </button>
+      </section>
+      <section class="departaments">
+        <ul class="ul-departaments"></ul>
+        <div class="div-null-admin hidden">
+          <h2 class="msg-null-adm">Selecione alguma das opções de empresas</h2>
+        </div>
+      </section>
+      <h3 class="title-cadastro">Usuários cadastrados</h3>
+      <section class="users-cadastrados">
+        <ul class="ul-departaments-user"></ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Kenzie Empresas</title>
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <script type="module" defer src="../scripts/import_login.js"></script>
+    <link rel="shortcut icon" href="../assets/companhia.png" type="image/x-icon">
+  </head>
+  <body>
+    <div>
+      <div class="modal-loading hidden">
+        <div class="spinner">
+          <div class="loading"></div>
+          <p class="loading-msg">LOADING</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container-header">
+        <div class="top-header">
+          <div class="title-header">
+            <img src="../assets/ellipse.png" alt="" />
+            <h1>Kenzie Empresas</h1>
+          </div>
+          <div class="menu-header">
+            <img src="../assets/vector.png" alt="" class="menu-three" />
+          </div>
+          <div class="modal-close-x hidden">
+            <img src="../assets/X.png" alt="" class="close-dropdown-x" />
+          </div>
+          <div class="buttons-header">
+            <button class="btn-login-header">Login</button>
+            <button class="btn-register-header">Cadastro</button>
+          </div>
+        </div>
+        <div class="buttons-dropdown hidden">
+          <button class="btn-login-dropdown">Home</button>
+          <button class="btn-register-dropdown">Cadastro</button>
+        </div>
+      </div>
+    </header>
+    <main class="menu-login">
+      <div class="modal-login">
+        <div class="container">
+          <h2>Login</h2>
+          <form class="form-login">
+            <label for="login">Preencha os campos para realizar login</label>
+            <input
+              type="email"
+              id="email"
+              class="loginemail"
+              placeholder="Seu e-mail"
+            />
+            <input
+              type="password"
+              id="password"
+              class="loginpwd"
+              placeholder="Sua senha"
+            />
+            <span class="msg-error hidden">A senha está incorreta</span>
+            <button class="btn-login">Login</button>
+            <span class="or">ou</span>
+          </form>
+          <button class="btn-register">Cadastre-se</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
